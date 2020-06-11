@@ -1,2 +1,2 @@
 # foundation
-Foundational documents and informatio; includes tooling around managing such
+Foundational documents and information; includes tooling around managing such
