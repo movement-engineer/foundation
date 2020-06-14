@@ -3,6 +3,8 @@ Foundational documents and information; includes tooling around managing the doc
 
 ### Contributing
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on how to contribute.
+
 #### Required tools
 
 For development, you need:
