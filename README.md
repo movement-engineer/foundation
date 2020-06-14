@@ -40,3 +40,10 @@ docker build -t registry.digitalocean.com/outof-coffee/movement-engineer-foundat
 docker push registry.digitalocean.com/outof-coffee/movement-engineer-foundation-site:latest
 kubectl rollout restart $DEPLOYMENT_NAME
 ```
+
+### Goals
+
+The goals of this repository are two-fold:
+
+1. Establish foundational documents for use by `movement-engineer` internally
+2. Provide a boilerplate starting point for other movements to use for their foundation
