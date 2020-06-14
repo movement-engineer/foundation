@@ -1,0 +1,42 @@
+baseURL = "https://foundation.movement.engineer/"
+languageCode = "en-us"
+title = "movement.engineer foundation"
+theme = "hugo-html5up-alpha"
+
+[params]
+  description = "movement.engineer foundation"
+  images = ["images/pic01.jpg"]
+  author = "Theme Author: [Nelson/Roberto](https://nelsonroberto.com/)"
+  copyright = "© 2020 movement engineer. all rights reserved."
+  design = "Theme Design: [HTML5 UP](http://html5up.net/)"
+  mainSections = ["mission"]
+
+### Footer Social Media Links ###
+[[params.share]]
+title = "facebook"
+icon = "fa-facebook-f" # fontawesome icons https://fontawesome.com/icons?d=gallery&s=brands
+link = "https://www.facebook.com/"
+
+[[params.share]]
+title = "twitter"
+icon = "fa-twitter"
+link = "https://twitter.com/"
+
+[[params.share]]
+title = "linkedin"
+icon = "fa-linkedin"
+link = "https://www.linkedin.com"
+
+### For Pages the .RelPermalink must match the menu .URL
+### For sections the name/directory must match the menu .Identifier
+[menu]
+  [[menu.main]]
+    identifier = "mission"
+    name = "Mission"
+    url = "/mission/"
+    weight = 10
+  [[menu.main]]
+    identifier = "core-principles"
+    name = "Core Principles"
+    url = "/core-principles/"
+    weight = 20

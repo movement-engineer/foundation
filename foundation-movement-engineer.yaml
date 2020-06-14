@@ -1,0 +1,50 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: movement-engineer-foundation-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  rules:
+    - host: foundation.movement.engineer
+      http:
+        paths:
+          - backend:
+              serviceName: movement-engineer-foundation-site
+              servicePort: 80
+  tls:
+    - secretName: movement-engineer-foundation-site-cert
+      hosts:
+        - foundation.movement.engineer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: movement-engineer-foundation-site
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: movement-engineer-foundation-site
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movement-engineer-foundation-site
+spec:
+  selector:
+    matchLabels:
+      app: movement-engineer-foundation-site
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: movement-engineer-foundation-site
+    spec:
+      containers:
+        - name: movement-engineer-foundation-site
+          image: registry.digitalocean.com/outof-coffee/movement-engineer-foundation-site:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
