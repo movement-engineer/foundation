@@ -25,6 +25,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Hugo generate
+        run: hugo
 
       - name: Run tests
         run: |
@@ -60,7 +63,7 @@ jobs:
 
       - name: Push image to Container Registry
         run: |
-          IMAGE_ID=#{{ secrets.REGISTRY_NAME }}/$IMAGE_NAME
+          IMAGE_ID=${{ secrets.CONTAINER_REGISTRY }}/$IMAGE_NAME
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
