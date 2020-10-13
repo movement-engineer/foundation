@@ -26,13 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
+      - name: Get theme
+        run: mkdir -p themes && cd themes && git clone https://github.com/dewittn/hugo-html5up-alpha.git && cd ..
+        
       - name: Hugo GitHub Action
         uses: crazy-max/ghaction-hugo@v1.3.3
-
-      - name: Hugo generate
-        run: |
-          mkdir -p themes && cd themes && git clone https://github.com/dewittn/hugo-html5up-alpha.git && cd ..
-          hugo
 
       - name: Run tests
         run: |
@@ -55,13 +53,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
+      - name: Get theme
+        run: mkdir -p themes && cd themes && git clone https://github.com/dewittn/hugo-html5up-alpha.git && cd ..
+        
       - name: Hugo GitHub Action
         uses: crazy-max/ghaction-hugo@v1.3.3
-
-      - name: Hugo generate
-        run: |
-          mkdir -p themes && cd themes && git clone https://github.com/dewittn/hugo-html5up-alpha.git && cd ..
-          hugo
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
