@@ -25,6 +25,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        
+      - name: Hugo Actions
+        uses: srt32/hugo-action@v0.0.3
       
       - name: Hugo generate
         run: hugo
@@ -49,6 +52,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        
+      - name: Hugo Actions
+        uses: srt32/hugo-action@v0.0.3
+      
+      - name: Hugo generate
+        run: hugo
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
