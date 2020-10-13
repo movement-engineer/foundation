@@ -26,9 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: Hugo Actions
-        uses: srt32/hugo-action@v0.0.3
-      
+      - name: Hugo GitHub Action
+        uses: crazy-max/ghaction-hugo@v1.3.3
+
       - name: Hugo generate
         run: hugo
 
@@ -53,9 +53,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: Hugo Actions
-        uses: srt32/hugo-action@v0.0.3
-      
+      - name: Hugo GitHub Action
+        uses: crazy-max/ghaction-hugo@v1.3.3
+
       - name: Hugo generate
         run: hugo
 
