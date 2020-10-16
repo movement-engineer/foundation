@@ -25,7 +25,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        submodules: 'recursive'
+        with:
+          submodules: 'recursive'
 
       - name: Hugo GitHub Action
         uses: crazy-max/ghaction-hugo@v1.3.3
@@ -53,7 +54,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        submodules: 'recursive'
+        with:
+          submodules: 'recursive'
 
       - name: Hugo GitHub Action
         uses: crazy-max/ghaction-hugo@v1.3.3
