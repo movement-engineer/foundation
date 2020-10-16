@@ -25,10 +25,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        
-      - name: Get theme
-        run: mkdir -p themes && cd themes && git clone https://github.com/dewittn/hugo-html5up-alpha.git && cd ..
-        
+        submodules: 'recursive'
+
       - name: Hugo GitHub Action
         uses: crazy-max/ghaction-hugo@v1.3.3
         with:
@@ -55,10 +53,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        
-      - name: Get theme
-        run: mkdir -p themes && cd themes && git clone https://github.com/dewittn/hugo-html5up-alpha.git && cd ..
-        
+        submodules: 'recursive'
+
       - name: Hugo GitHub Action
         uses: crazy-max/ghaction-hugo@v1.3.3
         with:
@@ -97,7 +93,7 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-          
+
       - name: Get outputs
         id: build_ouputs
         run: |
@@ -105,7 +101,7 @@ jobs:
 
     outputs:
       branch_name: ${{ steps.build_outputs.branch }}
-  
+
   deploy:
     needs: [push]
     runs-on: ubuntu-latest
