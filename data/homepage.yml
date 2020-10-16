@@ -5,18 +5,21 @@ banner:
   title: "movement engineer foundation"
   content: "core principles and mission statement" # Change this if you want something other then the site description
   buttons:
-    - title: "Mission"
+    - title: "Mission Statement"
       link: "/mission/"
       class: "primary"
     - title: "Core Principles"
       link: "/core-principles"
+      class: "primary"
+    - title: "Vision Statement"
+      link: "/vision"
       class: "primary"
 
 ### Highlight ###
 highlight:
   enable: true
   header: "A foundation built on principles <br /> of progress and social justice"
-  content: "Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br /> adipiscing nunc adipiscing. Condimentum turpis massa."
+  content: "We are a small, but growing team of diverse individuals who believe technology can do better.<br />We're looking for engineers and technologists to help build a better future."
   image: "images/pic01.jpg"
 
 ### Features ###
