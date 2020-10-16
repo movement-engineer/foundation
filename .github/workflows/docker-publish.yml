@@ -102,4 +102,14 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Deploy to Cluster
     steps:
-      - run: echo "would deploy here"
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Save DigitalOcean kubeconfig
+        run: doctl kubernetes cluster kubeconfig save ${{ secrets.CLUSTER_ID }}
+
+      - name: Rollout restart to cluster
+        run: kubectl rollout restart deployment/$DEPLOYMENT_NAME
+
