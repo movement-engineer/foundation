@@ -96,18 +96,10 @@ jobs:
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
 
-      - name: Get outputs
-        id: build_ouputs
-        run: |
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-
-    outputs:
-      branch_name: ${{ steps.build_outputs.branch }}
-
   deploy:
     needs: [push]
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && needs.push.outputs.branch_name == 'master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Deploy to Cluster
     steps:
       - run: echo "would deploy here"
