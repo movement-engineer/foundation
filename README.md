@@ -38,7 +38,7 @@ Steps:
 export DEPLOYMENT_NAME=$(kubectl get deployments | grep movement-engineer | awk '{print $1}')
 docker build -t registry.digitalocean.com/outof-coffee/movement-engineer-foundation-site:latest .
 docker push registry.digitalocean.com/outof-coffee/movement-engineer-foundation-site:latest
-kubectl rollout restart $DEPLOYMENT_NAME
+kubectl rollout restart deployment/$DEPLOYMENT_NAME
 ```
 
 ### Goals
