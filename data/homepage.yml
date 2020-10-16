@@ -2,8 +2,8 @@
 banner:
   enable: true
   image: #default is 'images/banner.jpg'
-  title: "movement engineer foundation"
-  content: "core principles and mission statement" # Change this if you want something other then the site description
+  title: "movement engineer"
+  content: "foundation homepage" # Change this if you want something other then the site description
   buttons:
     - title: "Mission Statement"
       link: "/mission/"
@@ -24,7 +24,7 @@ highlight:
 
 ### Features ###
 features:
-  enable: true
+  enable: false
   rows:
     - items:
       - title: "Magna etiam"
@@ -47,7 +47,7 @@ features:
 
 ### Blog ###
 blog:
-  enable: true
+  enable: false
   # Leave header text blank to remove entire <section>
   header: "Recent Posts"
   buttonText: "Read More"
@@ -55,6 +55,6 @@ blog:
 
 ### Call to Action ###
 cta:
-  enable: true
+  enable: false
   header: "Sign up for news"
   content: "Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc."

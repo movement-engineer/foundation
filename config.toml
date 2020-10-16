@@ -13,30 +13,30 @@ theme = "hugo-html5up-alpha"
 
 ### Footer Social Media Links ###
 [[params.share]]
-title = "facebook"
-icon = "fa-facebook-f" # fontawesome icons https://fontawesome.com/icons?d=gallery&s=brands
-link = "https://www.facebook.com/"
-
-[[params.share]]
 title = "twitter"
 icon = "fa-twitter"
-link = "https://twitter.com/"
+link = "https://twitter.com/movementengine"
 
 [[params.share]]
-title = "linkedin"
-icon = "fa-linkedin"
-link = "https://www.linkedin.com"
+title = "github"
+icon = "fa-github"
+link = "https://github.com/movement-engineer"
 
 ### For Pages the .RelPermalink must match the menu .URL
 ### For sections the name/directory must match the menu .Identifier
 [menu]
   [[menu.main]]
-    identifier = "mission"
-    name = "Mission"
-    url = "/mission/"
-    weight = 10
-  [[menu.main]]
     identifier = "core-principles"
     name = "Core Principles"
     url = "/core-principles/"
     weight = 20
+  [[menu.main]]
+    identifier = "mission"
+    name = "Mission Statement"
+    url = "/mission/"
+    weight = 10
+  [[menu.main]]
+    identifier = "vision"
+    name = "Vision Statement"
+    url = "/vision/"
+    weight = 10
