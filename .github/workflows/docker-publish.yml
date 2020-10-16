@@ -112,6 +112,5 @@ jobs:
 
       - name: Rollout restart to cluster
         run: |
-          export DEPLOYMENT_NAME=$(kubectl get deployments | grep movement-engineer | awk '{print $1}')
-          kubectl rollout restart deployment/$DEPLOYMENT_NAME
+          kubectl rollout restart deployment/$IMAGE_NAME
 
